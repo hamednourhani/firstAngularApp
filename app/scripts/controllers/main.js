@@ -12,7 +12,7 @@ angular.module('untitledApp')
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma',
-      'RequireJS' 
+      'Karma'
+
     ];
   });

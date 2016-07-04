@@ -12,16 +12,28 @@ module.exports = function (config) {
     port: 9876,
 
     files: [
-      'src/public/javascripts/vendor/jquery-1.9.1.min.js',
-      'src/public/javascripts/vendor/angular/angular.js',
-      'src/public/javascripts/vendor/angular/angular-*.js',
-      'test/lib/angular/angular-mocks.js',
-      'src/public/javascripts/vendor/bootstrap.min.js',
-      'src/public/javascripts/vendor/modernizr-*.min.js',
-      'src/public/javascripts/vendor/ui-bootstrap-0.4.0.min.js',
-      'src/public/javascripts/vendor/ui-bootstrap-tpls-0.4.0.min.js',
-      'src/public/javascripts/**/*.js',
-      'test/unit/**/*.js',
+      // 'src/public/javascripts/vendor/jquery-1.9.1.min.js',
+      // 'src/public/javascripts/vendor/angular/angular.js',
+      // 'src/public/javascripts/vendor/angular/angular-*.js',
+      // 'test/lib/angular/angular-mocks.js',
+      // 'src/public/javascripts/vendor/bootstrap.min.js',
+      // 'src/public/javascripts/vendor/modernizr-*.min.js',
+      // 'src/public/javascripts/vendor/ui-bootstrap-0.4.0.min.js',
+      // 'src/public/javascripts/vendor/ui-bootstrap-tpls-0.4.0.min.js',
+      // 'src/public/javascripts/**/*.js',
+      // 'test/unit/**/*.js',
+
+
+      'node_modules/requirejs/require.js',
+      'bower_components/angular/angular.js',
+      'bower_components/angular-animate/angular-animate.js',
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angular-cookies/angular-cookies.js',
+      'bower_components/angular-sanitize/angular-sanitize.js',
+      'app/scripts/**/*.js',
+      'app/scripts/*.js',
       'test/**/*.js'
     ],
 
@@ -35,7 +47,7 @@ module.exports = function (config) {
 
     // for PhantomJS, see install instructions: http://phantomjs.org/download.html
     // also see: http://codecuriosity.com/blog/2013/01/30/install-phantomjs-on-ubuntu/
-    browsers : ['Chrome','Firefox'],
+    browsers : ['Chrome'/*,'Firefox'*/],
 
     junitReporter   : {
       outputFile: 'test_out/unit.xml',
@@ -77,10 +89,10 @@ module.exports = function (config) {
       // dir : 'coverage/'
     },
 
-    proxies: {
-      '/': 'http://localhost:3000/'
-    },
-
-    urlRoot: '/__karma__/'
+    // proxies: {
+    //   '/': 'http://localhost:3000/'
+    // },
+    //
+    // urlRoot: '/__karma__/'
   });
 };
